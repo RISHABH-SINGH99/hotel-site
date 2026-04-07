@@ -1,93 +1,42 @@
-// ===============================
-// ✅ WAIT FOR DOM LOAD (ONLY ONE TIME)
-// ===============================
-document.addEventListener("DOMContentLoaded", () => {
+// ===== NAVBAR TOGGLE =====
+const menuBtn = document.getElementById('menu-btn');
+const navLinks = document.getElementById('nav-links');
 
-  // ===============================
-  // ✅ MOBILE MENU (FINAL)
-  // ===============================
-  const menuBtn = document.getElementById("menu-btn");
-  const navLinks = document.getElementById("nav-links");
+menuBtn.addEventListener('click', ()=>{
+    navLinks.classList.toggle('open');
+});
 
-  if (menuBtn && navLinks) {
-    menuBtn.addEventListener("click", (e) => {
-      navLinks.classList.toggle("active");
-      menuBtn.classList.toggle("active");
-      e.stopPropagation();
-    });
+// ===== HEADER SLIDER =====
+let slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
 
-    // outside click close
-    document.addEventListener("click", (e) => {
-      if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
-        navLinks.classList.remove("active");
-        menuBtn.classList.remove("active");
-      }
-    });
+function nextSlide(){
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide +1) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
 
-    // link click close
-    document.querySelectorAll(".nav_links a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        menuBtn.classList.remove("active");
-      });
-    });
-  }
+setInterval(nextSlide, 4000); // change every 4 sec
+
+// ===== WELCOME VIDEO =====
+const intro = document.getElementById('intro');
+const introVideo = document.getElementById('introVideo');
+
+introVideo.addEventListener('ended', ()=>{
+    intro.style.display='none';
+});
+
+// CLOSE INTRO ON CLICK OR SCROLL
+window.addEventListener('scroll', ()=> intro.style.display='none');
+window.addEventListener('click', ()=> intro.style.display='none');
 
 
-  // ===============================
-  // ✅ NAVBAR SCROLL EFFECT
-  // ===============================
-  const nav = document.querySelector("nav");
-
-  if (nav) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        nav.classList.add("scrolled");
-      } else {
-        nav.classList.remove("scrolled");
-      }
-    });
-  }
 
 
-  // ===============================
-  // ✅ SLIDER (SAFE)
-  // ===============================
-  const slides = document.querySelectorAll(".slide");
-  let index = 0;
-
-  function showSlide() {
-    slides.forEach((slide) => slide.classList.remove("active"));
-    slides[index].classList.add("active");
-    index = (index + 1) % slides.length;
-  }
-
-  if (slides.length > 0) {
-    setInterval(showSlide, 3000);
-  }
 
 
-  // ===============================
-  // ✅ INTRO VIDEO
-  // ===============================
-  const intro = document.getElementById("intro");
 
-  function closeIntro() {
-    if (intro && !intro.classList.contains("hide-intro")) {
-      intro.classList.add("hide-intro");
-      document.body.classList.add("loaded");
 
-      setTimeout(() => {
-        intro.style.display = "none";
-      }, 1000);
-    }
-  }
-
-  if (intro) {
-    setTimeout(closeIntro, 5000);
-    window.addEventListener("click", closeIntro);
-    window.addEventListener("scroll", closeIntro);
-  }
 
 
   // ===============================
@@ -170,7 +119,7 @@ ${total}`;
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, "_blank");
   };
 
-});
+
 
 
 
