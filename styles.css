@@ -1026,3 +1026,128 @@ nav.hide{
     text-shadow: 0 0 15px gold, 0 0 25px gold;
   }
 }
+
+
+
+
+
+
+
+/* form popup ===== */
+
+
+/* ===== POPUP BACKGROUND ===== */
+#popupForm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: none; /* important */
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  animation: fadeIn 0.4s ease;
+}
+
+/* ===== POPUP BOX ===== */
+.popup-box {
+  background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+  color: white;
+  animation: popupScale 0.4s ease;
+}
+
+/* ===== TITLE ===== */
+.popup-box h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: gold;
+}
+
+/* ===== INPUT ===== */
+.popup-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #111;
+  color: white;
+  border-bottom: 1px solid gold;
+}
+
+/* ===== LABEL ===== */
+.popup-box label {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* ===== TOTAL TEXT ===== */
+#totalAmount {
+  margin: 10px 0;
+  font-weight: bold;
+  color: gold;
+  text-align: center;
+}
+
+/* ===== BUTTONS ===== */
+.popup-box button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* CONFIRM BUTTON */
+.popup-box button:first-of-type {
+  background: linear-gradient(135deg, gold, #f5d76e);
+  color: black;
+}
+
+.popup-box button:first-of-type:hover {
+  transform: scale(1.05);
+}
+
+/* CLOSE BUTTON */
+.popup-box button:last-of-type {
+  background: #222;
+  color: white;
+}
+
+.popup-box button:last-of-type:hover {
+  background: red;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes popupScale {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(2);
+}

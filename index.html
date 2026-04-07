@@ -33,9 +33,36 @@
                     <li><a href="#explore">Explore</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <button class="btn nav_btn">Book Now</button>
+                <button   class="btn" onclick="openPopup('Standard Room',1000,'S101')">Book Now</button>
             </nav>
            <div class="header_slider" id="home">
+
+
+            
+<!-- POPUP -->
+<div id="popupForm">
+  <div class="popup-box">
+    <h3>Book Room</h3>
+
+    <input type="text" id="userName" placeholder="Your Name">
+
+    <input type="text" id="roomType" readonly>
+    <input type="text" id="roomId" readonly>
+
+    <label>Check-in</label>
+    <input type="datetime-local" id="checkin">
+
+    <label>Check-out</label>
+    <input type="datetime-local" id="checkout">
+
+    <input type="number" id="adults" placeholder="No. of Adults">
+
+    <p id="totalAmount">Total: ₹0</p>
+
+    <button onclick="sendWhatsApp()">Confirm</button>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
   
   <!-- SLIDES -->
   <div class="slides">
@@ -83,7 +110,8 @@
                 </div>
 
                 <div class="input_group input_btn">
-                    <button class="btn">CHECK OUT</button>
+                          <a href="./roomtest.html" class="btn">CHECK OUT </a> 
+                          
                 </div>
 
             </form>
@@ -205,7 +233,7 @@
                             Bask in luxury with breathtaking ocean views from your private suite.
                         </p>
                         <h5>Starting from <span>$399/night</span></h5>
-                        <button class="btn"> Book Now</button>
+                       <a href="./roomtest.html#dl1" class="btn">BooK Now </a> 
                     </div>
                 </div>
 
@@ -225,7 +253,7 @@
                            Experience urban elegance and modern confort int he heart of the city.
                         </p>
                         <h5>Starting from <span>$299/night</span></h5>
-                        <button class="btn"> Book Now</button>
+                        <a href="./roomtest.html#dl2" class="btn">BooK Now </a> 
                     </div>
                 </div>
 
@@ -246,7 +274,7 @@
                            Experience urban elegance and modern confort int he heart of the city.
                         </p>
                         <h5>Starting from <span>$239/night</span></h5>
-                        <button class="btn"> Book Now</button>
+                        <a href="./roomtest.html#dl3" class="btn">BooK Now </a> 
                     </div>
                 </div>
 
