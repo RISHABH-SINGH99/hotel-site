@@ -133,7 +133,7 @@
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    background-color: rgba(156, 32, 223, 0.9);
+    /* background-color: rgba(156, 32, 223, 0.9); */
     transform: translateY(-100%);
     transition: 0.5s;
     z-index: -1;
