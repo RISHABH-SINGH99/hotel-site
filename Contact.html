@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+<link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+
+     <!-- hadder  -->
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <nav class="nav_container">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img 
+        src="https://ik.imagekit.io/sob1cbgky/deeap%20hotel/vns%20photo/1-removebg-preview.png?updatedAt=1776150631629" 
+        alt="logo"
+      >
+    </div>
+
+    <!-- MENU -->
+    <ul class="nav_links" id="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/roomtest.html">Rooms</a></li>
+      <li><a href="/about.html">About</a></li>
+      
+      <li><a href="./Contact.html">Contact</a></li>
+    </ul>
+
+    <!-- BURGER -->
+    <div class="nav_menu_btn" id="menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </nav>
+</header>
+
+<!-- ===== NAVBAR ===== -->
+<section class="hotel-section">
+
+  <h2>Featured Hotel</h2>
+
+  <div class="hotel-card">
+    <div class="hotel-inner">
+
+      <!-- FRONT -->
+      <div class="hotel-front">
+        <img src="https://ik.imagekit.io/sob1cbgky/deeap%20hotel/vns%20photo/1.png?updatedAt=1776153679332">
+
+        <div class="content">
+          <h3>Hotel Deep Palace</h3>
+          <p>Budget friendly stay in Varanasi</p>
+        </div>
+      </div>
+
+      <!-- BACK -->
+      <div class="hotel-back">
+        <img src="https://ik.imagekit.io/sob1cbgky/deeap%20hotel/vns%20photo/back.png?updatedAt=1776153850947">
+
+        <div class="content">
+          <h3>Hotel Deep Palace</h3>
+
+          <p class="desc">
+            Comfortable rooms near ghats and temples.
+          </p>
+
+          <p class="address">
+            📍 Bhelupur, Varanasi
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+<div class="scene">
+
+  <svg viewBox="0 0 800 200" class="road">
+
+    <defs>
+      <linearGradient id="roadGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#00eaff"/>
+        <stop offset="100%" stop-color="#ff00ff"/>
+      </linearGradient>
+    </defs>
+
+    <!-- PATH -->
+    <path id="curve"
+      d="M0,150 C150,50 300,250 450,150 C600,50 750,200 800,120"
+      stroke="url(#roadGlow)"
+      stroke-width="5"
+      fill="none"/>
+
+    <!-- CAR (SVG TEXT) -->
+    <text font-size="30">
+      🚗
+      <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#curve"/>
+      </animateMotion>
+    </text>
+
+  </svg>
+
+  <!-- MOUNTAIN -->
+  <div class="mountain">⛰️🏨</div>
+
+  <!-- TEXT -->
+  <div class="text">Room Booked ✅</div>
+
+</div>
+<image href="car.png" width="40">
+  <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
+    <mpath href="#curve"/>
+  </animateMotion>
+</image>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+
+<link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+<section class="contact_section">
+
+  <div class="contact_card">
+
+    <h2>Contact Us</h2>
+
+    <form id="waForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <p id="successMsg">✅ Query sent successfully!</p>
+
+  </div>
+
+</section>
+
+<!-- JS LAST ME -->
+<script src="contact.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p>© 2026 DeepPalace | All Rights Reserved</p>
+</footer>
+
+<script src="conctscript.js"></script>
+</body>
+</html>
